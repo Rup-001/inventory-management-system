@@ -9,8 +9,41 @@ const productController = require('../controller/productController');
 //product home route
 productRouter.get('/', passport.authenticate('jwt', { session: false }), productController.productHome)
 
+
+
+
+const multer = require("multer");
+const path = require('path');
+
+
+//define storage
+
+const storage = multer.diskStorage({
+  destination:function(req,file,cb){
+    cb(null, path.join(__dirname, '../uploads/postImage'),function(error,success){
+      if(error){
+        console.log(error)
+      }
+    })
+
+  },
+  filename:function(req,file,cb){
+    const name = Date.now()+'-'+file.originalname;
+    cb(null,name,function(error,success){
+      if(error){
+        console.log(error)
+      }
+    })
+
+  }
+})
+
+const upload = multer({storage: storage})
+
+
+
 //add product route -- post
-productRouter.post('/addProduct',  passport.authenticate('jwt', { session: false }), productController.addProductPost);
+productRouter.post('/addProduct', upload.single('image'), passport.authenticate('jwt', { session: false }), productController.addProductPost);
 
 // Define the route to get all products with category
 productRouter.get('/products', productController.getAllProducts);

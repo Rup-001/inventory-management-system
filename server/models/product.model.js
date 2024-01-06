@@ -16,14 +16,16 @@ const productSchema = mongoose.Schema({
       quantity: {
         type: Number,
         default: 0,
+        required: true
       },
       manufacturer: {
         type: String,
         trim: true,
+        required: true
       },
-      imageUrl: {
-        data: Buffer,
-        contentType: String
+      image:{
+        type: String,
+        require : true
       },
       createdAt: {
         type: Date,

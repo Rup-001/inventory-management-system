@@ -1,22 +1,22 @@
 const product = require("../models/product.model");
 const category = require("../models/category.model");
 // Modify your Multer configuration in product.controller.js
-const multer = require("multer");
-//const path = require('path');
 
 
-//define storage
 
-const Storage = multer.diskStorage({
-  destination: "uploads",
-    filename: (req, file, cb) => {
-        cb(null, file.originalname);
-  }
-})
 
-const upload = multer({
-  storage : Storage
-}).single('testImage')
+
+
+// const Storage = multer.diskStorage({
+//   destination: "uploads",
+//     filename: (req, file, cb) => {
+//         cb(null, file.originalname);
+//   }
+// })
+
+// const upload = multer({
+//   storage : Storage
+// }).single('testImage')
 
 
 
@@ -40,52 +40,21 @@ exports.productHome = (req, res) => {
 
 exports.addProductPost = async (req,res)=> {
   try{
-    upload(req,res, async (err)=>{
-      if(err){
-        console.log(err);
-      }
-      else
-      {
-        
-  //Check if the provided category exists
-        let existingCategory = await category.findOne({ categoryName: category });
-
-        // If the category doesn't exist, create a new category
-        if (!existingCategory) {
-          console.log("Creating a new category:", category);
-          existingCategory = new category({
-            categoryName: category,
-          });
-          await existingCategory.save();
-        }
-
-      
           const newProduct = new product({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             quantity: req.body.quantity,
             manufacturer: req.body.manufacturer,
-            imageUrl : {
-              data: req.file.filename,
-              contentType : 'image/png'
-  
-            },
-            createdAt: req.body.createdAt,
-            category: existingCategory._id, 
-  
+            image: req.file.filename,
+            createdAt: req.body.createdAt,  
           })
-          newProduct.save()
+          await newProduct.save()
           .then(() => res.send("image uploaded"))
-          .catch((err) => console.log(err));
-        
-      
-        }
-        
-      })
+          .catch((err) => console.log(err)); 
   }
-  catch{
-    res.send("something went wrong");
+  catch(error){
+    res.status(400).send(error.message)
   }
 }
 

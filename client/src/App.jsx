@@ -8,6 +8,8 @@ import Login from './components/Auth/Login'
 import Registration from './components/Auth/Registration'
 import Admin from './components/Admin/admin'
 import Employee from './components/employee/Employee'
+import Allproducts from './components/products/AllProducts'
+import AddProducts from './components/products/AddProducts'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -24,6 +26,8 @@ function App() {
       <Route path='registration' element={<Registration />} >  </Route>
       <Route path='/admin' element={<Admin />} >  </Route>
       <Route path='/employee' element={<Employee />} >  </Route>
+      <Route path='/admin/allproducts' element={<Allproducts/>}></Route> 
+      <Route path='/admin/AddProducts' element={<AddProducts/>}></Route> 
     </Routes>
     </BrowserRouter>
     
