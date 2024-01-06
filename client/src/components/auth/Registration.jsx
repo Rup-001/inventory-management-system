@@ -1,6 +1,7 @@
 import React, { useState  } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 
 const Registration = () => {
 
@@ -40,66 +41,96 @@ const Registration = () => {
 
   return (
     <div>
-      <div>
-      <div className='d-flex flex-column justify-content-center align-items-center bg-light vh-10000' >
-        <div className='w-200 rounded bg-white  shadow p-4'>
-            <h1>User Registration</h1>
-            <form onSubmit={handleSubmit}>
-                <div className='mb-2'>
-                    <label htmlFor='username' >username: </label>
-                    <input type='text' name='username' className='form-control' placeholder='Enter username'
-                       onChange={e => setValues({...values, username: e.target.value})}
-                    />
-                    
-                </div>
-                <div className='mb-2'>
-                    <label htmlFor='password' >password: </label>
-                    <input type='text' name='password' className='form-control' placeholder='Enter password'
-                      onChange={e => setValues({...values, password: e.target.value})}
-                    />
-                </div>
-                <div className='mb-2'>
-                    <label htmlFor='email' >email: </label>
-                    <input type='Email' name='email' className='form-control' placeholder='Enter email'
-                      onChange={e => setValues({...values, email: e.target.value})}
-                    />
-                </div><div className='mb-2'>
-                    <label htmlFor='role' >role: </label>
-                    <input type='text' name='role' className='form-control' placeholder='Enter role'
-                      onChange={e => setValues({...values, role: e.target.value})}
-                    />
-                </div><div className='mb-2'>
-                    <label htmlFor='department' >department: </label>
-                    <input type='text' name='department' className='form-control' placeholder='Enter department'
-                      onChange={e => setValues({...values, department: e.target.value})}
-                    />
-                </div><div className='mb-2'>
-                    <label htmlFor='fullName' >fullName: </label>
-                    <input type='text' name='fullName' className='form-control' placeholder='Enter fullName'
-                      onChange={e => setValues({...values, fullName: e.target.value})}
-                    />
-                </div><div className='mb-2'>
-                    <label htmlFor='phoneNumber' >phoneNumber: </label>
-                    <input type='text' name='phoneNumber' className='form-control' placeholder='Enter phoneNumber'
-                      onChange={e => setValues({...values, phoneNumber: e.target.value})}
-                    />
-                </div><div className='mb-2'>
-                    <label htmlFor='city' >city: </label>
-                    <input type='text' name='city' className='form-control' placeholder='Enter city'
-                      onChange={e => setValues({...values, city: e.target.value})}
-                    />
-                </div><div className='mb-2'>
-                    <label htmlFor='zipCode' >zipCode: </label>
-                    <input type='text' name='zipCode' className='form-control' placeholder='Enter zipCode'
-                      onChange={e => setValues({...values, zipCode: e.target.value})}
-                    />
-                </div>
-                <button className='btn btn-success' >Submit</button>
-                <Link to="/" className='btn btn-primary ms-3' >Back</Link>
-            </form>
-        </div>
-      </div>
-    </div>
+      <Container className="mt-5">
+        <Row className="justify-content-center">
+        <Col md={6}> 
+            <Card>
+              <Card.Header>Registration</Card.Header>
+              <Card.Body>
+                <Form onSubmit={handleSubmit} >
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridUsername">
+                      <Form.Label>Username</Form.Label>
+                        <Form.Control type="text" name='username' placeholder="Username" 
+                        onChange={e => setValues({...values, username: e.target.value})}/>
+
+                      </Form.Group>
+                    <Form.Group as={Col} controlId="formGridFullName">
+                      <Form.Label>Full Name</Form.Label>
+                        <Form.Control type="text" name='fullName' placeholder="Full Name" 
+                        onChange={e => setValues({...values, fullName: e.target.value})}/>
+
+                      </Form.Group>
+                  </Row>
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridEmail">
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control type="email" name="email" placeholder="Enter email" 
+                      onChange={e => setValues({...values, email: e.target.value})}/>
+
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="formGridRole">
+                      <Form.Label>Role</Form.Label>
+                      <Form.Control type="text" name="role" placeholder="Enter Role" 
+                      onChange={e => setValues({...values, role: e.target.value})}/>
+
+                    </Form.Group>
+                  </Row>
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control type="password" name='password' placeholder="Password" 
+                      onChange={e => setValues({...values, password: e.target.value})}/>
+
+                    </Form.Group>
+                    <Form.Group as={Col} controlId="formGridPhone">
+                      <Form.Label>Phone no</Form.Label>
+                      <Form.Control type="text" name='phoneNumber' placeholder="Phone no" 
+                      onChange={e => setValues({...values, phoneNumber: e.target.value})}/>
+
+                    </Form.Group>
+                  </Row>
+
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridCity">
+                      <Form.Label>City</Form.Label>
+                      <Form.Control type='text' name='city' 
+                      value={values.address.city}
+                      onChange={(e) =>
+                        setValues({
+                          ...values,
+                          address: {
+                            ...values.address,
+                            city: e.target.value,
+                          }})}
+                      />
+
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGridZip">
+                      <Form.Label>Zip</Form.Label>
+                      <Form.Control type='text' name='zipCode'
+                      value={values.address.zipCode}
+                      onChange={(e) =>
+                        setValues({
+                          ...values,
+                          address: {
+                            ...values.address,
+                            zipCode: e.target.value,
+                          }}
+                       )}/>
+
+                    </Form.Group>
+                  </Row>
+                  <Button variant="primary" type="submit">
+                    Submit
+                  </Button>
+                </Form> 
+              </Card.Body>
+            </Card>
+        </Col>     
+        </Row>
+      </Container>  
     </div>
   )
 }

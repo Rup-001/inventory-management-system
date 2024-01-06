@@ -1,6 +1,7 @@
 import React, { useState  } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 
 const Login = () => {
 
@@ -87,7 +88,54 @@ const Login = () => {
 
   return(
       <div>
-  <div>
+
+        
+<Container className="mt-5">
+      <Row className="justify-content-center">
+        <Col md={6}>
+          <Card>
+            <Card.Header>Login</Card.Header>
+            <Card.Body>
+              <Form onSubmit={handleSubmit}>
+                <Form.Group>
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control type="text" name='username' placeholder="Enter your username"
+                  onChange={e => setValues({...values, username: e.target.value})}
+                  />
+                </Form.Group>
+                <Form.Group>
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" name='password' placeholder="Enter your password" 
+                  onChange={e => setValues({...values, password: e.target.value})}
+                  />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                  Login
+                </Button>
+                <Link to="/Registration" className='btn btn-primary ms-3' >Go to Registration</Link>
+                <Link to="/" className='btn btn-primary ms-3' >Back</Link>
+
+              </Form>
+              
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  {/* <div>
   <div className='d-flex flex-column justify-content-center align-items-center bg-light vh-10000' >
     <div className='w-200 rounded bg-white  shadow p-4'>
         <h1>User Login</h1>
@@ -116,7 +164,7 @@ const Login = () => {
         </div>
     </div>
   </div>
-</div>
+</div> */}
 </div>
     )
   }
