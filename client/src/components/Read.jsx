@@ -7,7 +7,7 @@ const Read = () => {
     const [data, setData] = useState([])
     const {id} = useParams();
     useEffect(()=>{
-        axios.get('http://localhost:3000/users/'+ id)
+        axios.get('http://localhost:5000/api/product/products/'+ id)
         .then(res=> setData(res.data) )
         .catch(err => console.log(err))
     }, [])
@@ -20,9 +20,9 @@ const Read = () => {
                 <div className='mb-2' >
                     <strong>Name: {data.name} </strong>
                 </div>
-                <div className='mb-2' >
+                {/* <div className='mb-2' >
                     <strong>Phone: {data.phone} </strong>
-                </div>
+                </div> */}
                 <Link to={`/update/${id}`} className='btn btn-success' >Edit</Link>
                 <Link to="/" className='btn btn-primary ms-3' >Back</Link>
             </div>

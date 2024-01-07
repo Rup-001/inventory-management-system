@@ -1,6 +1,8 @@
 import React,{ useEffect, useState } from 'react'
 import { Container, Row, Col, Card, Table, Form, Button, Navbar } from 'react-bootstrap';
 import axios from 'axios'
+import { Link, useNavigate } from 'react-router-dom'
+
 import NavbarCmp from '../navbar/Navbar'
 
 const AllProducts = () => {
@@ -12,6 +14,21 @@ const AllProducts = () => {
         .then(res=> setData(res.data) )
         .catch(err => console.log(err))
     }, [])
+
+
+    const deleteProduct = (name)=> {
+        const confirm = window.confirm("sure delete?" +name)
+        if(confirm){
+            axios.delete(`http://localhost:5000/api/product/products/${name}`)
+            .then(res => {
+                console.log(res)
+                location.reload();
+                // setData((prevData) => prevData.filter(product => product._id !== id));
+
+            }).catch(err => console.log(err))
+        }
+
+    } 
   return (
     <div>
         <NavbarCmp />
@@ -57,7 +74,10 @@ const AllProducts = () => {
                             {/* <td>{d.image}</td> */}
                             <td>
                                 {/* <Link to={`/read/${d.id}`}  className='btn btn-sm btn-info me-2 ' >Read</Link> */}
-                                <button className='btn btn-sm btn-primary me-2 ' >Edit</button>
+
+                                {/* <Link to={`/admin/ReadProducts/${d.name}`}  className='btn btn-sm btn-info me-2 ' >Read</Link> */}
+                                <Link to={`/admin/Products/${d._id}`}  className='btn btn-sm btn-info me-2 ' >Update</Link>
+                                <button className='btn btn-sm btn-danger me-2 ' onClick={e => deleteProduct(d.name)}>Delete</button>
                                 {/* <button onClick={e => handleDelete(d.id)} className='btn btn-sm btn-danger ' >Delete</button> */}
                             </td>
                         </tr>

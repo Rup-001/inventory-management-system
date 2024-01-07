@@ -72,6 +72,21 @@ exports.getAllProducts = async (req, res) => {
 };
 
 
+// Get all products by name
+exports.getProductsById =  (req, res) => {
+  try {
+    const id = req.params.id
+     product.findById({_id:id})
+    .then(users => res.json(users))
+    .catch(err => res.json(err))
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error retrieving products with category');
+  }
+};
+
+
 // Update a product by searching for it based on the productName
 // exports.updateProductByName = async (req, res) => {
 //   try {
@@ -99,11 +114,12 @@ exports.getAllProducts = async (req, res) => {
 
 exports.updateProductByName = async (req, res) => {
   try {
-    const { productName, updatedData } = req.body;
+    const  name= req.params;
+    const {updatedData} = req.body;
 
     // Use findOneAndUpdate
     const updatedProduct = await product.findOneAndUpdate(
-      { productName },
+      { name },
       updatedData,
       { new: true, runValidators: true }
     );
@@ -124,18 +140,19 @@ exports.updateProductByName = async (req, res) => {
 // Delete a product by name
 exports.deleteProductByName = async (req, res) => {
   try {
-    const { productName } = req.body;
+    const  name  = req.params.name;
 
     // Check if the product with the given name exists
-    const existingProduct = await product.findOne({ name: productName });
+    const existingProduct = await product.findOne({ name: name });
     if (!existingProduct) {
       return res.status(404).send('Product not found');
     }
 console.log("object")
     // Remove the product from the database
-    await product.deleteOne({name:  productName });
+    await product.deleteOne({name: name });
 
     res.json({ message: 'Product deleted successfully' });
+  
   } catch (error) {
     console.error(error);
     res.status(500).send('Error deleting the product');
