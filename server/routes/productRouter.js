@@ -61,7 +61,7 @@ productRouter.post('/assignProductToEmployee', productController.assignProductTo
 // productRouter.post('/requestProductApproval', productController.requestProductApproval);
 
 // Define the route to update a product by name
-productRouter.put('/products/updateByName', upload.single('image'), productController.updateProductByName);
+productRouter.put('/products/updateProduct', upload.single('image'), productController.updateProductByName);
 
 
 

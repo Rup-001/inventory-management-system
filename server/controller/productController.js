@@ -114,21 +114,48 @@ exports.getProductsById =  (req, res) => {
 
 exports.updateProductByName = async (req, res) => {
   try {
-    const  name= req.params;
-    const {updatedData} = req.body;
+    if(req.file!==undefined){
+      var id = req.body.id;
+      var name = req.body.name;
+      var description = req.body.description;
+      var price = req.body.price;
+      var quantity = req.body.quantity;
+      var manufacturer = req.body.manufacturer;
+      var filename = req.file.filename;
 
-    // Use findOneAndUpdate
-    const updatedProduct = await product.findOneAndUpdate(
-      { name },
-      updatedData,
-      { new: true, runValidators: true }
-    );
-
-    if (!updatedProduct) {
-      return res.status(404).send('Product not found');
+      await product.findByIdAndUpdate({_id:id}, {$set:
+      {
+        name:name,
+        description:description,
+        price:price,
+        quantity:quantity,
+        manufacturer:manufacturer,
+        image:filename
+      }
+      } )
+      res.status(200).send({success:true, msg:'updated successfully'})
     }
+    else{
+      var id = req.body.id;
+      var name = req.body.name;
+      var description = req.body.description;
+      var price = req.body.price;
+      var quantity = req.body.quantity;
+      var manufacturer = req.body.manufacturer;
 
-    res.json(updatedProduct);
+      await product.findByIdAndUpdate({_id:id}, {$set:
+      {
+        name:name,
+        description:description,
+        price:price,
+        quantity:quantity,
+        manufacturer:manufacturer
+      }
+      } )
+      res.status(200).send({success:true, msg:'updated successfully'})
+
+    }
+    
   } catch (error) {
     console.error(error);
     res.status(500).send('Error updating the product');

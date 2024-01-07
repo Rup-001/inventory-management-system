@@ -6,27 +6,45 @@ import { Link, useNavigate,useParams } from 'react-router-dom'
 
 const UpdateProducts = () => {
 
-    const [data, setData] = useState([])
+    const { id } = useParams();
+  const [product, setProduct] = useState({
+    name: '',
+    description: '',
+    price: '',
+    quantity: '',
+    manufacturer: '',
+    image: '',
+  });
 
-    const [values, setValues] = useState({
-        name: "",
-        description: "",
-        price: "",
-        quantity: "",
-        manufacturer: "",
-        image: ""
-       
-        
+  useEffect(() => {
+
+    axios.get(`http://localhost:5000/api/product/products/${id}`)
+      .then(response => setProduct(response.data))
+      .catch(error => console.error('Error fetching product data:', error));
+  }, [id]);
+
+  const handleUpdate = (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append('id', id);
+    formData.append('name', product.name);
+    formData.append('description', product.description);
+    formData.append('price', product.price);
+    formData.append('quantity', product.quantity);
+    formData.append('manufacturer', product.manufacturer);
+    formData.append('image', product.image);
+
+    axios.put(`http://localhost:5000/api/product/products/updateProduct`, formData, {
+      id: id,
+      ...product,
     })
+      .then(response => {
+        console.log('Product updated successfully:', response.data);
+      })
+      .catch(error => console.error('Error updating product:', error));
+  };  
 
-    const {id} = useParams()  
-    useEffect(()=>{
-        axios.get('http://localhost:5000/api/product/products/'+id)
-        .then(res=> {
-            setData(res.data)
-            console.log(res) })
-        .catch(err => console.log(err))
-    }, [])
+    
 
 
   return (
@@ -41,62 +59,64 @@ const UpdateProducts = () => {
                 <h1>Add Products</h1>
               </Card.Header>
               <Card.Body>
-                <Form  >
+                <Form  onSubmit={handleUpdate} >
 
                     <Form.Group as={Col} controlId="formGridName">
                       <Form.Label>Products Name</Form.Label>
                         <Form.Control type="text" name='name' placeholder="Product name" 
-                        value={data.name}
-                        // onChange={e => setValues({...values, name: e.target.value})}
+                        value={product.name}
+                        onChange={(e) => setProduct({ ...product, name: e.target.value })}
+
                         />
 
                       </Form.Group>
                     <Form.Group as={Col} controlId="formGridFullDescription">
                       <Form.Label>Description</Form.Label>
                         <Form.Control type="text" name='description' placeholder="Description"
-                         value={data.description}
-                        // onChange={e => setValues({...values, description: e.target.value})}
+                        value={product.description}
+                        onChange={(e) => setProduct({ ...product, description: e.target.value })}
+
                         />
 
                       </Form.Group>
                     <Form.Group as={Col} controlId="formGridPrice">
                       <Form.Label>Price</Form.Label>
                       <Form.Control type="text" name="price" placeholder="Price"
-                      value={data.price} 
-                    //   onChange={e => setValues({...values, price: e.target.value})}
+                      value={product.price}
+                      onChange={(e) => setProduct({ ...product, price: e.target.value })}
                       />
 
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridQuantity">
                       <Form.Label>Quantity</Form.Label>
-                      <Form.Control type="text" name="quantity" placeholder="Quantity" 
-                      value={data.quantity}
-                    //   onChange={e => setValues({...values, quantity: e.target.value})}
+                      <Form.Control type="text" name="quantity" placeholder="Quantity"
+                      value={product.quantity} 
+                      onChange={(e) => setProduct({ ...product, quantity: e.target.value })}
                       />
 
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridManufacturer">
                       <Form.Label>manufacturer</Form.Label>
                       <Form.Control type="text" name='manufacturer' placeholder="Manufacturer" 
-                      value={data.manufacturer}
-                    //   onChange={e => setValues({...values, manufacturer: e.target.value})}
+                      value={product.manufacturer}
+                      onChange={(e) => setProduct({ ...product, manufacturer: e.target.value })}
                       />
 
                     </Form.Group>
                     <Form.Group as={Col} controlId="formGridImage">
                       <Form.Label>Image</Form.Label>
                       <div>
-                        <img src={`http://localhost:5000/postImage/${data.image}`} style={{width:'100px',height:'100px'}}></img>
+                        <img src={`http://localhost:5000/postImage/${product.image}`}style={{width:'100px',height:'100px'}}></img>
                       </div>
-                      <Form.Control type="file" name='image' placeholder="image" 
-                    //   value={data.image}
-                    //   onChange={e => setValues({...values, image: e.target.files[0]})}
+                      {/* onChange={(e) => setProduct({ ...product, image: e.target.files[0] })} */}
+                      <Form.Control type="file" name='image' placeholder="image"
+                     onChange={(e) => setProduct({ ...product, image: e.target.files[0]  })}
                       />
 
                     </Form.Group>
 
                   
-                 
+        
                   <Button variant="primary" type="submit">
                     Submit
                   </Button>
