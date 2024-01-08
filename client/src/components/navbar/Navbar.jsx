@@ -22,6 +22,16 @@ const navbar = () => {
               </NavDropdown.Item>              
             </NavDropdown>
           </Nav>
+          <Nav className="me-auto">
+            <NavDropdown title="Users" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="/admin/allproducts">
+                All users
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/admin/AddProducts">
+                New Products
+              </NavDropdown.Item>              
+            </NavDropdown>
+          </Nav>
           <Nav>
             <Nav.Link href="#deets">More deets</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">

@@ -56,7 +56,7 @@ const UpdateProducts = () => {
         <Col md={6}> 
             <Card>
               <Card.Header>
-                <h1>Add Products</h1>
+                <h1>Update Products</h1>
               </Card.Header>
               <Card.Body>
                 <Form  onSubmit={handleUpdate} >
