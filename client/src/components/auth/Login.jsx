@@ -32,9 +32,9 @@ const Login = () => {
         
         if (decodedToken.role === 'employee') {
           console.log(decodeToken)
-          navigate('/employee');
+          navigate('/employee/${username}/dashboard');
         } else if (decodedToken.role === 'admin') {
-          navigate('/admin');
+          navigate('/admin/${username}/dashboard');
         }
         return;
       }
@@ -42,19 +42,21 @@ const Login = () => {
       .then((user)=>{
         if(user.data.success)
         {
+          const username = user.data.username;
+      localStorage.setItem("token", user.data.token);
           if(user.data.message === "Logged in as employee")
           {
             console.log(user)
             localStorage.setItem("token", user.data.token)
             console.log(user.data.message)
-            navigate('/employee')
+            navigate(`/employee/${username}/dashboard`)
           }
           else if(user.data.message === "Logged in as admin")
           {
             console.log(user)
             localStorage.setItem("token", user.data.token)
             console.log(user.data.message)
-            navigate('/admin')
+            navigate(`/admin/${username}/dashboard`)
           }
         }
         else{

@@ -3,11 +3,11 @@ const Router = express.Router();
 const profileController = require("../controller/profileController");
 const adminController = require("../controller/adminController")
 const passport = require('passport');
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 
-const app = express();
+// const app = express();
 
-app.use(passport.initialize());
+// app.use(passport.initialize());
 
 
 

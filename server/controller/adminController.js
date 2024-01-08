@@ -1,23 +1,34 @@
-const jwt = require('jsonwebtoken');
-const passport = require('../config/passport');
+// const jwt = require('jsonwebtoken');
+// const passport = require('../config/passport');
 const User = require("../models/user.model");
 
 
 // admin controller
 exports.adminDashboard = (req, res) => {
-    if (req.user.role.toLowerCase() === 'admin') {
-        res.send(
-            {
-            success: true,
-            message: 'Admin Dashboard',
-            user: {
-                id: req.user._id,
-                username: req.user.username,
-                role: req.user.role,
-            },
+    if (req.user && req.user.role.toLowerCase() === 'admin') {
+
+        try {
+            const username = req.params.username
+             User.findOne({username:username}).select('-password')
+            .then(users => res.json(users))
+            .catch(err => res.json(err))
+            
+          } catch (error) {
+            console.error(error);
+            res.status(500).send('Error retrieving products with category');
+          }
+        // res.send(
+        //     {
+        //     success: true,
+        //     message: 'Admin Dashboard',
+        //     user: {
+        //         id: req.user._id,
+        //         username: req.user.username,
+        //         role: req.user.role,
+        //     },
              
-        }
-       );
+        // }
+    //    );
     } else {
         res.status(403).json({ message: 'Permission Denied: Access restricted.' });
     }
