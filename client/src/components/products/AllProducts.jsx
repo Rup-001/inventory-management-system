@@ -6,11 +6,12 @@ import { Link, useNavigate } from 'react-router-dom'
 import NavbarCmp from '../navbar/Navbar'
 
 const AllProducts = () => {
+    // console.log(import.meta.env.VITE_API_BASE_URL)
 
     const [data, setData] = useState([])
     // const navigate = useNavigate();
     useEffect(()=>{
-        axios.get('http://localhost:5000/api/product/products')
+        axios.get(`${import.meta.env.VITE_API_PRODUCT_URL}/AllProducts`)
         .then(res=> setData(res.data) )
         .catch(err => console.log(err))
     }, [])
@@ -19,7 +20,7 @@ const AllProducts = () => {
     const deleteProduct = (name)=> {
         const confirm = window.confirm("sure delete?" +name)
         if(confirm){
-            axios.delete(`http://localhost:5000/api/product/products/${name}`)
+            axios.delete(`${import.meta.env.VITE_API_PRODUCT_URL}/${name}`)
             .then(res => {
                 console.log(res)
                 location.reload();
