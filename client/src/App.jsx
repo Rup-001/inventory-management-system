@@ -7,6 +7,7 @@ import Employee from './components/employee/Employee'
 import Allproducts from './components/products/AllProducts'
 import AddProducts from './components/products/AddProducts'
 import UpdateProduct from './components/products/UpdateProducts'
+import AllUsers from './components/users/AllUsers'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -18,6 +19,7 @@ function App() {
       <Route path='/' element={<Login />} >  </Route>
       <Route path='registration' element={<Registration />} >  </Route>
       <Route path='/admin/:username/dashboard' element={<Admin />} >  </Route>
+      <Route path='/admin/:username/allUsers' element={<AllUsers />} >  </Route>
       <Route path='/employee/:username/dashboard' element={<Employee />} >  </Route>
       <Route path='/admin/allproducts' element={<Allproducts/>}></Route> 
       <Route path='/admin/AddProducts' element={<AddProducts/>}></Route> 

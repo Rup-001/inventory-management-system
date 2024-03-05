@@ -46,13 +46,13 @@ const upload = multer({storage: storage})
 productRouter.post('/addProduct', upload.single('image'), passport.authenticate('jwt', { session: false }), productController.addProductPost);
 
 // Define the route to get all products with category
-productRouter.get('/products', productController.getAllProducts);
+productRouter.get('/AllProducts', productController.getAllProducts);
 
 // get products by id
-productRouter.get('/products/:id', productController.getProductsById);
+productRouter.get('/:id', productController.getProductsById);
 
 // Define the route to delete a product by name
-productRouter.delete('/products/:name', productController.deleteProductByName);
+productRouter.delete('/:name', productController.deleteProductByName);
 
 // Define the route to assign a product to an employee
 productRouter.post('/assignProductToEmployee', productController.assignProductToEmployee);
@@ -61,7 +61,7 @@ productRouter.post('/assignProductToEmployee', productController.assignProductTo
 // productRouter.post('/requestProductApproval', productController.requestProductApproval);
 
 // Define the route to update a product by name
-productRouter.put('/products/updateProduct', upload.single('image'), productController.updateProductByName);
+productRouter.put('/updateProduct', upload.single('image'), productController.updateProductByName);
 
 
 

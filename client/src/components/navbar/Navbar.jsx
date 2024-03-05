@@ -36,10 +36,10 @@ const navbar = () => {
     navigate('/')
   };
 
+  // const username = user.username
 
   return (
     <div>
-
 <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="/">Inventory Management</Navbar.Brand>
@@ -56,7 +56,7 @@ const navbar = () => {
             </NavDropdown>
           
             <NavDropdown title="Users" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="/admin/allUsers">
+              <NavDropdown.Item href ={ `/admin/${user.username}/allUsers`}>
                 All users
               </NavDropdown.Item>
               <NavDropdown.Item href="/admin/AddProducts">
