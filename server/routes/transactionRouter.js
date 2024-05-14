@@ -15,6 +15,9 @@ transactionRouter.get('/adminViewRequestedPrpoduct', passport.authenticate('jwt'
 //admin approve the request
 transactionRouter.post('/adminApproveRequest', passport.authenticate('jwt', { session: false }), transactionController.adminApproveRequest)
 
+//handover from employee
+transactionRouter.post('/handoverProduct', passport.authenticate('jwt', { session: false }), transactionController.handoverProduct)
+
 
 
 module.exports = transactionRouter;

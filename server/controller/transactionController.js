@@ -131,3 +131,53 @@ exports.adminApproveRequest = async (req, res) => {
     res.status(500).json({ message: 'Error processing approval' });
   }
 };
+
+
+exports.handoverProduct = async (req, res) => {
+  try {
+      const { fromUserId, toUserId, productId, quantity } = req.body;
+
+      // Find the user handing over the product
+      const fromUser = await User.findById(fromUserId);
+      if (!fromUser) {
+          return res.status(404).json({ message: 'User handing over the product not found' });
+      }
+
+      // Check if fromUser has products and if productId exists in the products list
+      if (!fromUser.products || !fromUser.products.length) {
+          return res.status(400).json({ message: 'User does not have any products to hand over' });
+      }
+
+      const productIndex = fromUser.products.findIndex(item => item.product.equals(productId));
+      if (productIndex === -1 || fromUser.products[productIndex].quantity < quantity) {
+          return res.status(400).json({ message: 'Insufficient quantity to hand over' });
+      }
+
+      // Find the user receiving the product
+      const toUser = await User.findById(toUserId);
+      if (!toUser) {
+          return res.status(404).json({ message: 'User receiving the product not found' });
+      }
+
+      // Remove the product from the handing-over user's list
+      fromUser.products[productIndex].quantity -= quantity;
+      if (fromUser.products[productIndex].quantity === 0) {
+          fromUser.products.splice(productIndex, 1);
+      }
+      await fromUser.save();
+
+      // Add the product to the receiving user's list
+      const productInToUser = toUser.products.find(item => item.product.equals(productId));
+      if (productInToUser) {
+          productInToUser.quantity += quantity;
+      } else {
+          toUser.products.push({ product: productId, quantity });
+      }
+      await toUser.save();
+
+      res.json({ message: 'Product handed over successfully' });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Internal Server Error' });
+  }
+};
