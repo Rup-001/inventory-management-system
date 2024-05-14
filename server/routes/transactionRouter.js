@@ -1,18 +1,19 @@
 const express = require("express");
 const transactionRouter = express.Router();
 const transactionController = require ("../controller/transactionController")
+const passport = require('passport');
 
 //transaction HOME route
-transactionRouter.get('/', transactionController.transactionHome)
+transactionRouter.get('/', passport.authenticate('jwt', { session: false }), transactionController.transactionHome)
 
 //employee request for products
-transactionRouter.post('/requestProduct', transactionController.requestProduct )
+transactionRouter.post('/requestProduct', passport.authenticate('jwt', { session: false }), transactionController.requestProduct )
 
 //admin view request for products
-transactionRouter.get('/adminViewRequestedPrpoduct', transactionController.adminViewRequestedPrpoduct)
+transactionRouter.get('/adminViewRequestedPrpoduct', passport.authenticate('jwt', { session: false }), transactionController.adminViewRequestedPrpoduct)
 
 //admin approve the request
-transactionRouter.post('/adminApproveRequest', transactionController.adminApproveRequest)
+transactionRouter.post('/adminApproveRequest', passport.authenticate('jwt', { session: false }), transactionController.adminApproveRequest)
 
 
 

@@ -25,7 +25,7 @@ Router.get('/admin/:username/dashboard', passport.authenticate('jwt', { session:
 Router.get('/admin/:username/showEmployee', passport.authenticate('jwt', { session: false }), adminController.showEmployee);
 
 // Admin approve/reject registration route
-Router.get('/admin/:username/showNewRegistration', passport.authenticate('jwt', { session: false }), adminController.showNewRegistration);
+Router.get('/admin/showNewRegistration', passport.authenticate('jwt', { session: false }), adminController.showNewRegistration);
 
 // Admin approve/reject registration route
 Router.post('/admin/:username/approveRegistration', passport.authenticate('jwt', { session: false }), adminController.approveRegistration);
