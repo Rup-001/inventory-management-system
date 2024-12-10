@@ -1,0 +1,472 @@
+[{
+  "_id": {
+    "$oid": "66646de320c0d1433cdce1b6"
+  },
+  "name": "laptop",
+  "description": "laptop",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "hp",
+  "model": "core i5",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "hasan",
+    "branch": "dhaka",
+    "department": "Administration"
+  },
+  "productCode": "laptop-1",
+  "purchaseDetails": {
+    "price": 45000,
+    "buyingMemo": "3.jpeg"
+  },
+  "createdAt": {
+    "$date": "2024-06-08T14:42:43.288Z"
+  },
+  "__v": 0,
+  "approvedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  }
+},
+{
+  "_id": {
+    "$oid": "6664aa7220c0d1433cdce22a"
+  },
+  "name": "bag",
+  "description": "backpack",
+  "category": "accesorries",
+  "subcategory": "accesorries",
+  "brand": "N/A",
+  "model": "N/A",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "Rup",
+    "branch": "Dhaka",
+    "department": "Admistration"
+  },
+  "productCode": "accesorries-1",
+  "purchaseDetails": {
+    "price": 500,
+    "buyingMemo": "6.jpg"
+  },
+  "createdAt": {
+    "$date": "2024-06-08T19:01:06.527Z"
+  },
+  "__v": 0,
+  "approvedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  }
+},
+{
+  "_id": {
+    "$oid": "6666a41c6aa0826b0b5a31ef"
+  },
+  "name": "mouse",
+  "description": "Thunderobot ML602 Wireless Tri Mode Gaming Mouse",
+  "category": "electronics",
+  "subcategory": "mouse",
+  "brand": "Thunderobot",
+  "model": "ML602 Wireless",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "mouse-1",
+  "purchaseDetails": {
+    "price": 3900,
+    "buyingMemo": "6.jpg"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T06:58:36.824Z"
+  },
+  "__v": 0,
+  "approvedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  }
+},
+{
+  "_id": {
+    "$oid": "6666a6426aa0826b0b5a31fa"
+  },
+  "name": "OFFICE CHAIR",
+  "description": "OFFICE CHAIR CSC-231\r\nSwivel Chair-CSC-231-10-1-66 (1Part)",
+  "category": "accesorries",
+  "subcategory": "accesorries",
+  "brand": "Regal Furniture",
+  "model": "N/A",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "accesorries-2",
+  "purchaseDetails": {
+    "price": 12198,
+    "buyingMemo": "6.jpg"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:07:46.994Z"
+  },
+  "__v": 0,
+  "approvedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  }
+},
+{
+  "_id": {
+    "$oid": "6666a6bf6aa0826b0b5a3205"
+  },
+  "name": "OFFICE SWIVEL",
+  "description": "OFFICE SWIVEL CHAIR-CSM-227\r\nSWIVEL CHAIR-CSM-227-2-1-08 (Swivel)",
+  "category": "accesorries",
+  "subcategory": "accesorries",
+  "brand": "Regal Furniture",
+  "model": "N/A",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "accesorries-3",
+  "purchaseDetails": {
+    "price": 14999,
+    "buyingMemo": "6.jpg"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:09:51.571Z"
+  },
+  "__v": 0,
+  "approvedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  }
+},
+{
+  "_id": {
+    "$oid": "6666a8497773964b522ac4a8"
+  },
+  "name": "laptop",
+  "description": "Apple MacBook Air 13.3-Inch Retina Display 8-core Apple M1 chip with 8GB RAM, 256GB SSD (MGN63) Space Gray",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "Apple",
+  "model": "Apple MacBook Air",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "laptop-2",
+  "purchaseDetails": {
+    "price": 103000,
+    "buyingMemo": "6.jpg-1718003785821"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:16:25.854Z"
+  },
+  "__v": 0,
+  "approvedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  }
+},
+{
+  "_id": {
+    "$oid": "6666a8917773964b522ac4b1"
+  },
+  "name": "laptop",
+  "description": "Lenovo IdeaPad Flex 5 14ALC7 AMD Ryzen 5 5500U 14\" Touchscreen Laptop",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "Lenovo",
+  "model": "Lenovo IdeaPad Flex 5 14ALC7",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "laptop-3",
+  "purchaseDetails": {
+    "price": 145000,
+    "buyingMemo": "6.jpg-1718003857769"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:17:37.778Z"
+  },
+  "__v": 0,
+  "approvedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  }
+},
+{
+  "_id": {
+    "$oid": "6666a8d07773964b522ac4ba"
+  },
+  "name": "laptop",
+  "description": "Apple MacBook Air (2022) Apple M2 Chip 13.6-Inch Liquid Retina Display 8GB RAM 256GB SSD Midnight #MLY33LL/A / MLY33ZP/A",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "Apple",
+  "model": "Apple MacBook Air",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "laptop-4",
+  "purchaseDetails": {
+    "price": 149999,
+    "buyingMemo": "6.jpg-1718003920306"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:18:40.309Z"
+  },
+  "__v": 0,
+  "approvedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  }
+},
+{
+  "_id": {
+    "$oid": "6666a99f7773964b522ac4c3"
+  },
+  "name": "laptop",
+  "description": "Lenovo IdeaPad Flex 5 14ALC7 AMD Ryzen 7 5700U 14\" Touchscreen Laptop",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "Lenovo",
+  "model": "Lenovo IdeaPad Flex 5",
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "laptop-5",
+  "purchaseDetails": {
+    "price": 140000,
+    "buyingMemo": "6.jpg-1718004127158"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:22:07.166Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666ada47773964b522ac4f6"
+  },
+  "name": "laptop",
+  "description": "Lenovo IdeaPad Flex 5 14ALC7 AMD Ryzen 7 5700U 14\" Touchscreen Laptop",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "Lenovo",
+  "model": "Lenovo IdeaPad Flex 5",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "laptop-6",
+  "purchaseDetails": {
+    "price": 140000,
+    "buyingMemo": "6.jpg-1718005156642"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:39:16.651Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666ae2e7773964b522ac503"
+  },
+  "name": "laptop",
+  "description": "Chuwi MiniBook X 2 in 1 Intel Core N100 12GB RAM 512GB SSD 10.5 Inch FHD+ WUXGA Touch Display Grey Laptop",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "HP",
+  "model": "Chuwi MiniBook X 2",
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "laptop-7",
+  "purchaseDetails": {
+    "price": 40000,
+    "buyingMemo": "6.jpg-1718005294831"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:41:34.837Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666ae5f7773964b522ac50a"
+  },
+  "name": "laptop",
+  "description": "Acer Aspire 5 5P-A515-58P Intel Core i3 1305U 8GB RAM 512GB SSD 15.6 Inch FHD Display Steel Gray Laptop",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "Acer",
+  "model": "Acer Aspire 5 5P-A515-58P",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "laptop-8",
+  "purchaseDetails": {
+    "price": 50000,
+    "buyingMemo": "6.jpg-1718005343558"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:42:23.561Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666aea57773964b522ac512"
+  },
+  "name": "laptop",
+  "description": "Infinix INBOOK Y2 Plus Intel Core i5 1155G7 8GB RAM, 512GB SSD 15.6 Inch FHD Display Silver Laptop",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "Infinix",
+  "model": "Infinix INBOOK Y2 Plus Intel Core i5",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "laptop-9",
+  "purchaseDetails": {
+    "price": 55000,
+    "buyingMemo": "6.jpg-1718005413412"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:43:33.419Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666aeee7773964b522ac51b"
+  },
+  "name": "bag",
+  "description": "backpack",
+  "category": "accesorries",
+  "subcategory": "accesorries",
+  "brand": "N/A",
+  "model": "N/A",
+  "quantity": 0,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "accesorries-4",
+  "purchaseDetails": {
+    "price": 1000,
+    "buyingMemo": "6.jpg-1718005486388"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:44:46.390Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666af8acdc9ed0bca377dee"
+  },
+  "name": "bag",
+  "description": "bagpack",
+  "category": "accesorries",
+  "subcategory": "accesorries",
+  "brand": "N/A",
+  "model": "N/A",
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "productCode": "accesorries-5",
+  "purchaseDetails": {
+    "price": 1000,
+    "buyingMemo": "1718005642535-6.jpg"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T07:47:22.557Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66673487656cbac29df368df"
+  },
+  "name": "laptop",
+  "description": "MPN: 5C3R7PA\r\nModel: 250 G8\r\nProcessor: Intel Celeron N4020 (4M Cache, 1.10 GHz up to 2.80 GHz)\r\nRAM: 4GB DDR4 3200MHz, Storage: 1TB HDD\r\nDisplay: 15.6\" FHD (1920 x 1080)\r\nFeatures: Full-size keyboard with numeric keypad, Type-C",
+  "category": "electronics",
+  "subcategory": "laptop",
+  "brand": "HP",
+  "model": "HP 250 G8 Intel Celeron N4020",
+  "quantity": 1,
+  "status": "pending",
+  "addedBy": {
+    "username": "hasan",
+    "branch": "dhaka",
+    "department": "Administration"
+  },
+  "productCode": "laptop-10",
+  "purchaseDetails": {
+    "price": 37000,
+    "buyingMemo": "1718039687700-6.jpg"
+  },
+  "createdAt": {
+    "$date": "2024-06-10T17:14:47.887Z"
+  },
+  "__v": 0
+}]

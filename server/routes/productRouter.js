@@ -2,30 +2,29 @@ const express = require("express")
 const productRouter = express.Router();
 //require("../config/database");
 const passport = require('passport');
-
+require('../config/passport');
 // Update your productRouter in routes.js
 const productController = require('../controller/productController');
+const isAdmin = require('../middleware/isAdmin');
+const isAdminOrEmployee = require('../middleware/isAdminOrEmployee');
+//const upload = require('../middleware/uploadMiddleware');
 
-//product home route
-productRouter.get('/', passport.authenticate('jwt', { session: false }), productController.productHome)
 
-
-
+const app = express();
+app.use(passport.initialize());
 
 const multer = require("multer");
 const path = require('path');
 
 
-//define storage
-
+/// Define storage
 const storage = multer.diskStorage({
-  destination:function(req,file,cb){
-    cb(null, path.join(__dirname, '../uploads/postImage'),function(error,success){
-      if(error){
-        console.log(error)
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname, '../uploads/buyingMemos'), function (error) {
+      if (error) {
+        console.log(error);
       }
-    })
-
+    });
   },
   filename:function(req,file,cb){
     const name = Date.now()+'-'+file.originalname;
@@ -36,35 +35,50 @@ const storage = multer.diskStorage({
     })
 
   }
-})
+});
 
-const upload = multer({storage: storage})
+const upload = multer({ storage: storage });
 
 
+//product home route
+productRouter.get('/', isAdminOrEmployee, productController.productHome)
 
 //add product route -- post
-productRouter.post('/addProduct', upload.single('image'), passport.authenticate('jwt', { session: false }), productController.addProductPost);
+// productRouter.post('/addProduct', isAdmin, productController.addProductPost);
+// productRouter.post('/addProductWithImage', upload.single('profileImage'),  productController.addProductWithImage);
+productRouter.post('/addProductWithImage', upload.single('purchaseDetails.0.buyingMemo'), productController.addProductWithImage);
 
 // Define the route to get all products with category
-productRouter.get('/AllProducts', productController.getAllProducts);
+productRouter.get('/AllProducts', isAdmin, productController.getAllProducts);
+productRouter.get('/AllApprovedProducts',  productController.getAllApprovedProducts);
+productRouter.get('/BranchAllApprovedProducts',  productController.getBrnanchAllApprovedProducts);
 
 // get products by id
-productRouter.get('/:id', productController.getProductsById);
+productRouter.get('/AllProducts/:id',  productController.getProductsById);
+productRouter.get('/pending',  productController.pendingProducts);
+
+// Define the route to update a product by name
+productRouter.put('/updateProduct/:id',   productController.updateProductById);
+productRouter.put('/approve/:productId',  productController.approveProductById);
+productRouter.delete('/reject/:productId',  productController.rejectProductById);
 
 // Define the route to delete a product by name
-productRouter.delete('/:name', productController.deleteProductByName);
+productRouter.delete('/deleteProduct/:id', isAdmin, productController.deleteProductById);
 
 // Define the route to assign a product to an employee
-productRouter.post('/assignProductToEmployee', productController.assignProductToEmployee);
+//productRouter.post('/assignProductToEmployee', productController.assignProductToEmployee);
 
 // Define the route to request a product for approval
 // productRouter.post('/requestProductApproval', productController.requestProductApproval);
 
-// Define the route to update a product by name
-productRouter.put('/updateProduct', upload.single('image'), productController.updateProductByName);
+productRouter.get('/categories', productController.getAllCatagory);
+productRouter.get('/SubCategories', productController.SubCategories);
+
+productRouter.get('/nextProductCode', productController.getNextProductCode);
 
 
-
+productRouter.get('/count', productController.getProductCount);
+productRouter.get('/countPending', productController.countPending);
 
 
 

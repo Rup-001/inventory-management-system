@@ -1,0 +1,193 @@
+[{
+  "_id": {
+    "$oid": "66582d8d6c609c79326ae60d"
+  },
+  "productId": {
+    "$oid": "6650e89a4089951e41cc0301"
+  },
+  "employeeId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "assignedDate": {
+    "$date": "2024-05-01T18:00:00.000Z"
+  },
+  "returnedDate": null,
+  "branchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "currentStatus": "assigned",
+  "quantity": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665aba0e49ec4b2060d90f0b"
+  },
+  "productId": {
+    "$oid": "66556c5aef6a60681eb54c5f"
+  },
+  "employeeId": {
+    "$oid": "6652d3b29c2573a11c0da972"
+  },
+  "assignedDate": {
+    "$date": "2024-06-13T00:00:00.000Z"
+  },
+  "returnedDate": null,
+  "branchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "currentStatus": "assigned",
+  "quantity": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665ac16f49ec4b2060d90f24"
+  },
+  "productId": {
+    "$oid": "66556e0c51a9b8b37aa3d00c"
+  },
+  "employeeId": {
+    "$oid": "6652db7a9dadd3a829484a18"
+  },
+  "assignedDate": {
+    "$date": "2024-06-05T00:00:00.000Z"
+  },
+  "returnedDate": {
+    "$date": "2024-06-18T00:00:00.000Z"
+  },
+  "branchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "currentStatus": "assigned",
+  "quantity": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665ac1a149ec4b2060d90f2b"
+  },
+  "productId": {
+    "$oid": "66556e0c51a9b8b37aa3d00c"
+  },
+  "employeeId": {
+    "$oid": "6652db949dadd3a829484a1d"
+  },
+  "assignedDate": {
+    "$date": "2024-06-05T00:00:00.000Z"
+  },
+  "returnedDate": {
+    "$date": "2024-06-18T00:00:00.000Z"
+  },
+  "branchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "currentStatus": "assigned",
+  "quantity": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665ac5ad49ec4b2060d90f65"
+  },
+  "productId": {
+    "$oid": "66556c5aef6a60681eb54c5f"
+  },
+  "employeeId": {
+    "$oid": "6652db7a9dadd3a829484a18"
+  },
+  "assignedDate": {
+    "$date": "2024-06-05T00:00:00.000Z"
+  },
+  "returnedDate": null,
+  "branchId": {
+    "$oid": "665844866c609c79326ae74c"
+  },
+  "currentStatus": "assigned",
+  "quantity": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665ac5e349ec4b2060d90f6f"
+  },
+  "productId": {
+    "$oid": "66556c5aef6a60681eb54c5f"
+  },
+  "employeeId": {
+    "$oid": "6652db7a9dadd3a829484a18"
+  },
+  "assignedDate": {
+    "$date": "2024-06-05T00:00:00.000Z"
+  },
+  "returnedDate": null,
+  "branchId": {
+    "$oid": "665844866c609c79326ae74c"
+  },
+  "currentStatus": "assigned",
+  "quantity": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665ac60949ec4b2060d90f7c"
+  },
+  "productId": {
+    "$oid": "66556c6ef706564f6967698f"
+  },
+  "employeeId": {
+    "$oid": "6652db7a9dadd3a829484a18"
+  },
+  "assignedDate": {
+    "$date": "2024-06-05T00:00:00.000Z"
+  },
+  "returnedDate": null,
+  "branchId": {
+    "$oid": "665844866c609c79326ae74c"
+  },
+  "currentStatus": "assigned",
+  "quantity": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665cb8f03c070342fe74b527"
+  },
+  "productId": {
+    "$oid": "66556c5aef6a60681eb54c5f"
+  },
+  "employeeId": {
+    "$oid": "6652d3b29c2573a11c0da972"
+  },
+  "assignedDate": {
+    "$date": "2024-06-04T00:00:00.000Z"
+  },
+  "returnedDate": null,
+  "branchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "currentStatus": "assigned",
+  "quantity": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6664add520c0d1433cdce245"
+  },
+  "productId": {
+    "$oid": "6662a93ba577939828b17ffc"
+  },
+  "employeeId": {
+    "$oid": "665f749575bc56015af605fd"
+  },
+  "assignedDate": {
+    "$date": "2024-09-05T18:00:00.000Z"
+  },
+  "returnedDate": null,
+  "branchId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "currentStatus": "assigned",
+  "quantity": 1,
+  "__v": 0
+}]

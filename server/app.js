@@ -7,14 +7,21 @@ const JwtStrategy = require('passport-jwt').Strategy
 const  ExtractJwt = require('passport-jwt').ExtractJwt;
 const User = require("./models/user.model");
 const authRouter = require("./routes/authRouter")
-const userRouter = require("./routes/userRouter")
 const productRouter = require("./routes/productRouter")
-const transactionRouter = require("./routes/transactionRouter")
+const locationRouter = require("./routes/locationRouter")
+const InventoryRouter= require("./routes/inventoryRouter")
+const assignmnetRouter = require ('./routes/assignmentRouter')
+const transferRouter = require('./routes/transferRouter')
+
+
+
+//const transactionRouter = require("./extra/transactionRouter")
+//const userRouter = require("./extra/userRouter")
 
 
 
 const database = require("./config/database")
-const passport = require('passport');
+const passport = require('./config/passport');
 app.use(passport.initialize());
 app.set("view engine", "ejs");
 app.use(cors(
@@ -34,11 +41,23 @@ app.use('/api/product', productRouter)
 app.use('/api/', authRouter)
 
 //user route
-app.use('/api/user', userRouter)
+//app.use('/api/user', userRouter)
 
 //transaction route
 //app.use('/api/transac', transactionRouter)
-app.use('/api/transaction', transactionRouter)
+//app.use('/api/transaction', transactionRouter) //pre auth / emi er jonno creadit carf hoy
+
+//location router
+app.use('/api/', locationRouter)
+
+//inventory router
+app.use('/api/', InventoryRouter)
+
+//assignment router
+app.use('/api/', assignmnetRouter)
+
+//transfer router
+app.use('/api/', transferRouter)
 
 // Not available route
 app.use((req, res, next) => {

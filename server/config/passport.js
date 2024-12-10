@@ -1,24 +1,16 @@
-require("dotenv").config()
+require("dotenv").config();
+const User = require("../models/user.model"); // Adjust the path as necessary
+const JwtStrategy = require('passport-jwt').Strategy;
+const ExtractJwt = require('passport-jwt').ExtractJwt;
+const passport = require("passport");
 
-const User = require("../models/user.model")
-
-const JwtStrategy = require('passport-jwt').Strategy
-const  ExtractJwt = require('passport-jwt').ExtractJwt;
-    const passport = require("passport")
-const opts = {}
+const opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = process.env.SECRET_KEY;
 
-
-passport.use(new JwtStrategy(opts, async function (jwt_payload, done) {
+passport.use(new JwtStrategy(opts, async (jwt_payload, done) => {
     try {
-        const user = await User.findOne({ _id: jwt_payload.id }).exec();
-        console.log("2");
-// console.log('user', user);
-console.log('user');
-// console.log('jwt_payload', jwt_payload);
-console.log('jwt_payload');
-console.log("14");
+        const user = await User.findById(jwt_payload.id);
         if (user) {
             return done(null, user);
         } else {
@@ -28,3 +20,5 @@ console.log("14");
         return done(err, false);
     }
 }));
+
+module.exports = passport;

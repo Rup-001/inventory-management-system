@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "name": "dhaka",
+  "address": "nikunja",
+  "contactInfo": "12345",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6656e29376ee5b823ef0ca22"
+  },
+  "name": "ctg",
+  "address": "ctg",
+  "contactInfo": "3344",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665844676c609c79326ae747"
+  },
+  "name": "taxhub",
+  "address": "gulshan u tower",
+  "contactInfo": "+8809293738574",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665844866c609c79326ae74c"
+  },
+  "name": "Digit",
+  "address": "Banani",
+  "contactInfo": "+8809829474937",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "name": "Head Office",
+  "address": "Nikunja",
+  "contactInfo": "+8804543456433",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6664ac4e20c0d1433cdce234"
+  },
+  "name": "solution branch",
+  "address": "Gulshan 2",
+  "contactInfo": "+8801834521355",
+  "__v": 0
+}]

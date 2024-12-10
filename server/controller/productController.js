@@ -1,56 +1,89 @@
 const product = require("../models/product.model");
-const category = require("../models/category.model");
-// Modify your Multer configuration in product.controller.js
+const Product = require("../models/product.model");
+//const upload = require('../middleware/uploadMiddleware');
+const inventory = require("../models/inventory.model")
+const jwt = require('jsonwebtoken');
+exports.addProductWithImage = async (req, res) => {
+  const uploadedFile = req.file;
+  try {
+    const {
+      name,
+      description,
+      category,
+      subcategory,
+      brand,
+      model,
+      quantity,
+      status,
+      productCode,
+      price,
+      username,
+      branch,
+      department,
+    } = req.body;
+
+    const buyingMemo = req.file ? req.file.path : '';
+
+    const product = new Product({
+      name,
+      description,
+      category,
+      subcategory,
+      brand,
+      model,
+      quantity,
+      status,
+      productCode,
+      purchaseDetails: {
+        price,
+        buyingMemo: uploadedFile.filename,
+      },
+      addedBy: {
+        username,
+        branch,
+        department,
+
+      }
+    });
+
+    await product.save();
+
+    res.status(201).json({ message: 'Product added successfully', product });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
 
 
 
 
 
 
-// const Storage = multer.diskStorage({
-//   destination: "uploads",
-//     filename: (req, file, cb) => {
-//         cb(null, file.originalname);
-//   }
-// })
 
-// const upload = multer({
-//   storage : Storage
-// }).single('testImage')
+
+
 
 
 
 //product home
 exports.productHome = (req, res) => {
-  try {
-      // Check if the authenticated user's role is admin or employee
-      if (req.user && req.user.role.toLowerCase() === 'admin' || 'employee' ) {
-           res.send({
-              success: true,
-              message: `Product Home`,
-          });
-      } else {
-          return res.status(403).json({ message: 'Permission Denied: Access restricted.' });
-      }
-  } catch (error) {
-      console.error(error);
-      res.status(500).json({ message: 'Server error during product retrieval.' });
-  }
+  res.send("product home")
 };
 
+
+//add product --POST
 exports.addProductPost = async (req,res)=> {
   try{
           const newProduct = new product({
             name: req.body.name,
             description: req.body.description,
-            price: req.body.price,
-            quantity: req.body.quantity,
-            manufacturer: req.body.manufacturer,
-            image: req.file.filename,
-            createdAt: req.body.createdAt,  
+            category: req.body.category,
+            brand: req.body.brand,
+            model: req.body.model,
+            quantity : req.body.quantity, 
           })
           await newProduct.save()
-          .then(() => res.send("image uploaded"))
+          .then(() => res.json(newProduct))
           .catch((err) => console.log(err)); 
   }
   catch(error){
@@ -72,7 +105,161 @@ exports.getAllProducts = async (req, res) => {
 };
 
 
-// Get all products by name
+
+// Get all products with associated category
+exports.getAllCatagory = async (req, res) => {
+  try {
+    const categories = await product.find().distinct('category')
+    res.json(categories);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error retrieving products with category');
+  }
+};
+
+exports.SubCategories = async (req, res) => {
+  try {
+    const SubCategories = await product.find().distinct('subcategory')
+    res.json(SubCategories);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error retrieving products with category');
+  }
+};
+
+
+exports.getNextProductCode = async (req, res) => {
+  try {
+    const subcategory = req.query.subcategory;
+    const count = await product.countDocuments({ subcategory });
+    res.json({ nextCode: count + 1 });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error retrieving next product code');
+  }
+};
+
+
+exports.getProductCount = async (req, res) => {
+  try {
+    const productCount = await Product.countDocuments();
+    res.json({ count: productCount });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+exports.countPending = async (req, res) => {
+  try {
+    const pendingCount = await Product.countDocuments({ status: 'pending' });
+    res.json({ count: pendingCount });
+} catch (error) {
+    res.status(500).json({ message: error.message });
+}
+};
+
+exports.getAllApprovedProducts = async (req, res) => {
+  try {
+    const subcategories = await product.find({ status: 'approved' })
+    res.json(subcategories);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error retrieving products with category');
+  }
+};
+
+
+ //const jwt = require('jsonwebtoken'); // Import jwt to decode token
+
+// exports.getBrnanchAllApprovedProducts = async (req, res) => {
+//   try {
+//     const token = req.headers.authorization.split(' ')[1];
+//     const decodedToken = jwt.decode(token);
+
+//     const userBranch = decodedToken.branchId; // Assuming branchId is stored in the token
+
+//     // Filter products based on the user's branch
+//     const products = await product.find({ status: 'approved', branchId: userBranch });
+
+//     res.json(products);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send('Error retrieving products with category');
+//   }
+// // };
+
+
+// exports.getBrnanchAllApprovedProducts = async (req, res) => {
+//   try {
+//     const token = req.headers.authorization.split(' ')[1];
+//     if (!token) {
+//       return res.status(401).send('Authorization token missing');
+//     }
+
+//     const decodedToken = jwt.verify(token, process.env.SECRET_KEY);
+//     if (!decodedToken || !decodedToken.branchId) {
+//       return res.status(401).send('Invalid token');
+//     }
+
+//     const userBranch = decodedToken.branchId;
+
+//     // Filter inventory items based on the user's branch
+//     const Inventory = await inventory.find({ status: 'approved', branchId: userBranch });
+
+//     res.json(Inventory);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send('Error retrieving products');
+//   }
+// }const jwt = require('jsonwebtoken');
+//const Inventory = require('../models/inventory'); // Assuming you have a model for inventory
+
+exports.getBrnanchAllApprovedProducts = async (req, res) => {
+    try {
+        const authHeader = req.headers.authorization;
+        if (!authHeader) {
+            return res.status(401).send('Authorization token missing');
+        }
+
+        const token = authHeader.split(' ')[1];
+        if (!token) {
+            return res.status(401).send('Authorization token missing');
+        }
+
+        const decodedToken = jwt.verify(token, process.env.SECRET_KEY);
+        if (!decodedToken || !decodedToken.branchId) {
+            return res.status(401).send('Invalid token');
+        }
+
+        const userBranch = decodedToken.branchId;
+
+        // Filter inventory items based on the user's branch
+        const inventoryItems = await inventory.find({ status: 'approved', locationId: userBranch })
+        .populate("productId");
+        //const inventoryItems = await inventory.find()
+
+        res.json(inventoryItems);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving products');
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Get all products by id --POST
 exports.getProductsById =  (req, res) => {
   try {
     const id = req.params.id
@@ -112,71 +299,124 @@ exports.getProductsById =  (req, res) => {
 
 
 
-exports.updateProductByName = async (req, res) => {
+exports.updateProductById = async (req, res) => {
   try {
-    if(req.file!==undefined){
-      var id = req.body.id;
-      var name = req.body.name;
-      var description = req.body.description;
-      var price = req.body.price;
-      var quantity = req.body.quantity;
-      var manufacturer = req.body.manufacturer;
-      var filename = req.file.filename;
+    const productId = req.params.id;
+    const updateData = {
+      name: req.body.name,
+      description: req.body.description,
+      category: req.body.category,
+      brand: req.body.brand,
+      model: req.body.model,
+      quantity : req.body.quantity, 
+    };
 
-      await product.findByIdAndUpdate({_id:id}, {$set:
-      {
-        name:name,
-        description:description,
-        price:price,
-        quantity:quantity,
-        manufacturer:manufacturer,
-        image:filename
-      }
-      } )
-      res.status(200).send({success:true, msg:'updated successfully'})
+    const updatedProduct = await product.findByIdAndUpdate(productId, updateData, { new: true });
+
+    if (!updatedProduct) {
+      return res.status(404).send("Product not found");
     }
-    else{
-      var id = req.body.id;
-      var name = req.body.name;
-      var description = req.body.description;
-      var price = req.body.price;
-      var quantity = req.body.quantity;
-      var manufacturer = req.body.manufacturer;
 
-      await product.findByIdAndUpdate({_id:id}, {$set:
-      {
-        name:name,
-        description:description,
-        price:price,
-        quantity:quantity,
-        manufacturer:manufacturer
-      }
-      } )
-      res.status(200).send({success:true, msg:'updated successfully'})
+    res.send("Product updated successfully");
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+};
 
-    }
+exports.pendingProducts = async  (req, res) => {
+  try {
+    const pendingProducts = await product.find({ status: 'pending' });
+    res.json(pendingProducts);
     
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error updating the product');
+    res.status(500).send('Error retrieving products with category');
+  }
+};
+
+// exports.approvedProductById = async (req, res) => {
+//   try {
+//     const Product = await product.findByIdAndUpdate(req.params.productId, { status: 'approved' });
+//         res.json(Product);
+//   } catch (error) {
+//     res.status(400).send(error.message);
+//   }
+// };
+
+
+
+exports.approveProductById = async (req, res) => {
+  try {
+    // const { productId } = req.params;
+    // const { username, branch, department } = req.body;
+    // const Product = await product.findById(req.params.productId);
+    const { productId } = req.params;
+    const { approvedBy } = req.body; // Destructure approvedBy from the request body
+
+    const Product = await product.findById(productId);
+    if (!Product) {
+      return res.status(404).send("Product record not found");
+    }
+
+    if (Product.status !== 'pending') {
+      return res.status(400).send("Product record is not pending approval");
+    }
+
+    // Check if an approved product record already exists
+    let approvedProduct = await product.findOne({ productCode: Product.productCode, status: 'approved' });
+
+    if (approvedProduct) {
+      // If the record exists, update the quantity and merge other relevant details if necessary
+      approvedProduct.quantity += Product.quantity;
+
+      // You can merge other fields here if needed
+      await approvedProduct.save();
+
+      // Delete the pending product record
+      await product.findByIdAndDelete(product._id);
+    } else {
+      // If the record does not exist, update the current pending record to approved
+      approvedProduct = Product;
+      approvedProduct.status = 'approved';
+      approvedProduct.approvedBy = {
+        username: approvedBy.username,
+        branch: approvedBy.branch,
+        department: approvedBy.department
+      };
+      await approvedProduct.save();
+    }
+
+    res.json(approvedProduct);
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+};
+
+
+exports.rejectProductById = async (req, res) => {
+  try {
+    const Product = await product.findByIdAndDelete(req.params.productId);
+        res.json(Product);
+  } catch (error) {
+    res.status(400).send(error.message);
   }
 };
 
 
 
 // Delete a product by name
-exports.deleteProductByName = async (req, res) => {
+exports.deleteProductById = async (req, res) => {
   try {
-    const  name  = req.params.name;
+    const id = req.params.id;
 
     // Check if the product with the given name exists
-    const existingProduct = await product.findOne({ name: name });
+    const existingProduct = await product.findById(id);
     if (!existingProduct) {
       return res.status(404).send('Product not found');
     }
 console.log("object")
     // Remove the product from the database
-    await product.deleteOne({name: name });
+    await product.findByIdAndDelete(id);
 
     res.json({ message: 'Product deleted successfully' });
   

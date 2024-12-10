@@ -1,0 +1,2313 @@
+{
+	"info": {
+		"_postman_id": "f04e8458-0e14-48a7-90f0-b32748dd20fc",
+		"name": "Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34781162"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWY4MTU2MWYyODVkYWUzNmQ5YjFkNSIsInVzZXJuYW1lIjoiQXJpZiIsImRlcGFydG1lbnQiOiJBZG1pbmlzdHJhdGlvbiIsImJyYW5jaCI6InRheGh1YiIsImJyYW5jaElkIjoiNjY1ODQ0Njc2YzYwOWM3OTMyNmFlNzQ3IiwiaWF0IjoxNzE3ODM3NTcyLCJleHAiOjE3MTgwMTAzNzJ9.WCb5yp8_YimMZYnJ4F80lX3pOUrddNdzlzFs_tVmLRI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/AllUser/666499fe20c0d1433cdce210",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"AllUser",
+								"666499fe20c0d1433cdce210"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY3MTkxOTQsImV4cCI6MTcxNjg5MTk5NH0.rhvxxoZ_SbFzyggqmUeUljo5OIm0kI7nQ7KqY7neueE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/AllUser",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"AllUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pending users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY3MTkxOTQsImV4cCI6MTcxNjg5MTk5NH0.rhvxxoZ_SbFzyggqmUeUljo5OIm0kI7nQ7KqY7neueE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pendingUser",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pendingUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY3MTkxOTQsImV4cCI6MTcxNjg5MTk5NH0.rhvxxoZ_SbFzyggqmUeUljo5OIm0kI7nQ7KqY7neueE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/count",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count pending user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY3MTkxOTQsImV4cCI6MTcxNjg5MTk5NH0.rhvxxoZ_SbFzyggqmUeUljo5OIm0kI7nQ7KqY7neueE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pendingCount",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pendingCount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user pending users in branhces",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWY4MTU2MWYyODVkYWUzNmQ5YjFkNSIsInVzZXJuYW1lIjoiQXJpZiIsImRlcGFydG1lbnQiOiJBZG1pbmlzdHJhdGlvbiIsImJyYW5jaCI6InRheGh1YiIsImJyYW5jaElkIjoiNjY1ODQ0Njc2YzYwOWM3OTMyNmFlNzQ3IiwiaWF0IjoxNzMzNDcwNTQxLCJleHAiOjE3MzM2NDMzNDF9.JwqKRKcR4I6z0SOExe3BeR87srTn_E04Eg--bJhbNfc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pending/665844676c609c79326ae747",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pending",
+								"665844676c609c79326ae747"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "rasel",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "rasel",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rasel@gamail.com",
+									"type": "text"
+								},
+								{
+									"key": "designation",
+									"value": "software engineer",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "Technology",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "iftekhar Rasel",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "+8801765345547",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Dhaka, Bangladesh",
+									"type": "text"
+								},
+								{
+									"key": "branchId",
+									"value": "665844a36c609c79326ae74f",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "D:\\4.jpeg"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Lubna",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Lubna",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Lubna@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "designation",
+									"value": "Management Information Officer",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "Technology",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "Ruqaia Lubna",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "+8801534547764",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Dhaka, Bangladesh",
+									"type": "text"
+								},
+								{
+									"key": "branchId",
+									"value": "665844a36c609c79326ae74f",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "C:\\Users\\Rup-Genex\\OneDrive - Genex Infosys Ltd\\Desktop\\5.jpg"
+								},
+								{
+									"key": "gender",
+									"value": "Female",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/registerUpdateUser/665f749575bc56015af605fd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"registerUpdateUser",
+								"665f749575bc56015af605fd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "rup",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "rup",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rup@a.comaaaa",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "employee",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "Admistration",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "aa",
+									"type": "text"
+								},
+								{
+									"key": "phoneNumber",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "{    city : \"dhaka\",    zipCode : \"1205\"    }",
+									"type": "text"
+								},
+								{
+									"key": "branchId",
+									"value": "664e33a47b6b35e56c6ca2cb",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "C:\\Users\\Rup-Genex\\OneDrive - Genex Infosys Ltd\\Desktop\\pexels-photo-14918477.jpeg"
+								},
+								{
+									"key": "city",
+									"value": "dhk",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "zipCode",
+									"value": "11",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"formdata": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/deleteUsers/66606e6ee03735e2e46e2f00",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"deleteUsers",
+								"66606e6ee03735e2e46e2f00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n\r\n//admin\r\n\r\n\r\n{\r\n    \"email\" : \"arif@gmail.com\",\r\n    \"password\" : \"Arif\"\r\n}\r\n\r\n\r\n//employee\r\n// {\r\n//     \"email\" : \"rasel@gmail.com\",\r\n//     \"password\" : \"rasel\"\r\n// }\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-url}}/AllProducts",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"AllProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product count",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4NzM1NTgsImV4cCI6MTcxNzA0NjM1OH0.XjAUE97AaLQ9hNidIZLVtXCrI8J6qgkDLw_yQoXWLFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-url}}/count",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Products Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4NzM1NTgsImV4cCI6MTcxNzA0NjM1OH0.XjAUE97AaLQ9hNidIZLVtXCrI8J6qgkDLw_yQoXWLFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-url}}/AllProducts",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"AllProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Products Copy 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-url}}/SubCategories",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"SubCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Products Copy 3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4NzM1NTgsImV4cCI6MTcxNzA0NjM1OH0.XjAUE97AaLQ9hNidIZLVtXCrI8J6qgkDLw_yQoXWLFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-url}}/countPending",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"countPending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pending products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4NzM1NTgsImV4cCI6MTcxNzA0NjM1OH0.XjAUE97AaLQ9hNidIZLVtXCrI8J6qgkDLw_yQoXWLFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-url}}/pending",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"pending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Products by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBkZmE5ZDQyNmRmNmNiMTM0NmMxNCIsInVzZXJuYW1lIjoiYWEiLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3MTY2MjA3MTEsImV4cCI6MTcxNjc5MzUxMX0.moSUzJIAmpY9TA7GgLYu1OazRA8K1asC7AuAWAC_e-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-url}}/AllProducts/66556c5aef6a60681eb54c5f",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"AllProducts",
+								"66556c5aef6a60681eb54c5f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllApprovedProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBkZmE5ZDQyNmRmNmNiMTM0NmMxNCIsInVzZXJuYW1lIjoiYWEiLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE3MTY2MjA3MTEsImV4cCI6MTcxNjc5MzUxMX0.moSUzJIAmpY9TA7GgLYu1OazRA8K1asC7AuAWAC_e-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-url}}/AllApprovedProducts",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"AllApprovedProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4NzM1NTgsImV4cCI6MTcxNzA0NjM1OH0.XjAUE97AaLQ9hNidIZLVtXCrI8J6qgkDLw_yQoXWLFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmM2MjhlZTk1MTc0YzhlZjFiN2MyZCIsInVzZXJuYW1lIjoiYWEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDQ1MzA5MjQsImV4cCI6MTcwNDcwMzcyNH0.jitvYq6NlwH4UcS2OtOQurvVFewmntR5Ohe8Kkj0w7o",
+								"description": "admin token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "bag",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "backpack",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "accesorries",
+									"type": "text"
+								},
+								{
+									"key": "subcategory",
+									"value": "accesorries",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "N/A",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "N/A",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "pending",
+									"type": "text"
+								},
+								{
+									"key": "productCode",
+									"value": "accesorries-1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "purchaseDetails.0.buyingMemo",
+									"type": "file",
+									"src": "C:\\Users\\Rup-Genex\\OneDrive - Genex Infosys Ltd\\Desktop\\6.jpg"
+								},
+								{
+									"key": "username",
+									"value": "Rup",
+									"type": "text"
+								},
+								{
+									"key": "branch",
+									"value": "Dhaka",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "Admistration",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-url}}/addProductWithImage",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"addProductWithImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product by name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-url}}/deleteProduct/6660457c6b3279db7c72b227",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"deleteProduct",
+								"6660457c6b3279db7c72b227"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products update by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY2MjEzMDIsImV4cCI6MTcxNjc5NDEwMn0.6CYZKDgRRJn_NH-GeNc5AFeuXdl-WNQTqK9_kNd-Sy8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"name1\",\r\n    \"description\":\"description1\",\r\n    \"category\":\"category1\",\r\n    \"brand\":\"brand1\",\r\n    \"model\":\"model1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-url}}/updateProduct/6650e89a4089951e41cc0301",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"updateProduct",
+								"6650e89a4089951e41cc0301"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BranchAllApprovedProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjQ5OWZlMjBjMGQxNDMzY2RjZTIxMCIsInVzZXJuYW1lIjoicmFzZWwiLCJkZXBhcnRtZW50IjoiVGVjaG5vbG9neSIsImJyYW5jaCI6IkhlYWQgT2ZmaWNlIiwiYnJhbmNoSWQiOiI2NjU4NDRhMzZjNjA5Yzc5MzI2YWU3NGYiLCJpYXQiOjE3MjEwMzgyMzcsImV4cCI6MTcyMTIxMTAzN30.jkN7DmuIikf86SzMHdbum0q8OWcq2oEFnOZoDaf6mkg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product-url}}/BranchAllApprovedProducts",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"BranchAllApprovedProducts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Request product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDMzNzEyMWUxMzNiNDFhOTM0ZjY3YiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTU2ODEwODIsImV4cCI6MTcxNTg1Mzg4Mn0.la2fWqGJIOqjo_KemofQ1_umlLGd7V2LWLzNyKW6jK0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "mul",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"example_username\",\r\n  \"product\": \"laptop\",\r\n  \"quantity\": 5,\r\n  \"specification\": \"example_specification\",\r\n  \"remarks\": \"example_remarks\",\r\n  \"timestamp\": \"2024-03-06T12:00:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-url}}/requestProduct",
+							"host": [
+								"{{transaction-url}}"
+							],
+							"path": [
+								"requestProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin View Req Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDMzNzEyMWUxMzNiNDFhOTM0ZjY3YiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTU2ODEwODIsImV4cCI6MTcxNTg1Mzg4Mn0.la2fWqGJIOqjo_KemofQ1_umlLGd7V2LWLzNyKW6jK0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{transaction-url}}/adminViewRequestedPrpoduct",
+							"host": [
+								"{{transaction-url}}"
+							],
+							"path": [
+								"adminViewRequestedPrpoduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Approved Req Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDMzNzEyMWUxMzNiNDFhOTM0ZjY3YiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTU2ODEwODIsImV4cCI6MTcxNTg1Mzg4Mn0.la2fWqGJIOqjo_KemofQ1_umlLGd7V2LWLzNyKW6jK0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"_id\": \"66434db13a1377ff90a4929a\",\r\n        \"requestStatus\" : \"approved\",\r\n        \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-url}}/adminApproveRequest",
+							"host": [
+								"{{transaction-url}}"
+							],
+							"path": [
+								"adminApproveRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Handover from employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDMzNzEyMWUxMzNiNDFhOTM0ZjY3YiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTU2ODEwODIsImV4cCI6MTcxNTg1Mzg4Mn0.la2fWqGJIOqjo_KemofQ1_umlLGd7V2LWLzNyKW6jK0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"664338831e133b41a934f685\",\r\n    \"fromUserId\": \"66432ab8b64768e5ce3543d1\",\r\n    \"toUserId\": \"664337121e133b41a934f67b\",\r\n    \"quantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{transaction-url}}/handoverProduct",
+							"host": [
+								"{{transaction-url}}"
+							],
+							"path": [
+								"handoverProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Device Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/employee/:username",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"employee",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Dashboard",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmM2MjhlZTk1MTc0YzhlZjFiN2MyZCIsInVzZXJuYW1lIjoiYWEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDQ3Mzc3NTIsImV4cCI6MTcwNDkxMDU1Mn0.xoJEYH7i6KbdyZxq26eGTNzlcNEou3sF1Ek3XHXZjeM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/admin/aa/dashboard",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"admin",
+								"aa",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin show Employee",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDMzNzEyMWUxMzNiNDFhOTM0ZjY3YiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTU2ODEwODIsImV4cCI6MTcxNTg1Mzg4Mn0.la2fWqGJIOqjo_KemofQ1_umlLGd7V2LWLzNyKW6jK0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmM2MjhlZTk1MTc0YzhlZjFiN2MyZCIsInVzZXJuYW1lIjoiYWEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDQ3Mzc3NTIsImV4cCI6MTcwNDkxMDU1Mn0.xoJEYH7i6KbdyZxq26eGTNzlcNEou3sF1Ek3XHXZjeM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/admin/:bb/showEmployee",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"admin",
+								":bb",
+								"showEmployee"
+							],
+							"variable": [
+								{
+									"key": "bb",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin show New Registration",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDMzNzEyMWUxMzNiNDFhOTM0ZjY3YiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTU2ODEwODIsImV4cCI6MTcxNTg1Mzg4Mn0.la2fWqGJIOqjo_KemofQ1_umlLGd7V2LWLzNyKW6jK0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{user-url}}/admin/showNewRegistration",
+							"host": [
+								"{{user-url}}"
+							],
+							"path": [
+								"admin",
+								"showNewRegistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Approve New Registration",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDMzNzEyMWUxMzNiNDFhOTM0ZjY3YiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTU2ODEwODIsImV4cCI6MTcxNTg1Mzg4Mn0.la2fWqGJIOqjo_KemofQ1_umlLGd7V2LWLzNyKW6jK0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rup\",\r\n    \"isApproved\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/admin/:username/approveRegistration",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"admin",
+								":username",
+								"approveRegistration"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Extra",
+			"item": [
+				{
+					"name": "Assign Product To Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-url}}/assignProductToEmployee",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"assignProductToEmployee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product Home",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY1ODE2MDUsImV4cCI6MTcxNjc1NDQwNX0.OQhkZfaFmPD86EE4xAQBhjIChie0WfbwIQFXZ0gEfCs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.32.1",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{product-url}}",
+							"host": [
+								"{{product-url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products With Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\" : \"electronics\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product-url}}/products/category",
+							"host": [
+								"{{product-url}}"
+							],
+							"path": [
+								"products",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transaction Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{transaction-url}}",
+							"host": [
+								"{{transaction-url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "It Profile",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmM2MjhlZTk1MTc0YzhlZjFiN2MyZCIsInVzZXJuYW1lIjoiYWEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDQ3Mzc3NTIsImV4cCI6MTcwNDkxMDU1Mn0.xoJEYH7i6KbdyZxq26eGTNzlcNEou3sF1Ek3XHXZjeM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/it/:bb",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"it",
+								":bb"
+							],
+							"variable": [
+								{
+									"key": "bb",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "Add inventory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4NzM1NTgsImV4cCI6MTcxNzA0NjM1OH0.XjAUE97AaLQ9hNidIZLVtXCrI8J6qgkDLw_yQoXWLFI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6662f1cda577939828b1804e\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/addInventory",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addInventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All inventory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTcwNjQ1MzQsImV4cCI6MTcxNzIzNzMzNH0.bJjZgbefzDoMwC3paFpMjeKJeud2HXQ9qkLrss086Rw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/getAllInventory",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getAllInventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pending inventory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTcwNjQ1MzQsImV4cCI6MTcxNzIzNzMzNH0.bJjZgbefzDoMwC3paFpMjeKJeud2HXQ9qkLrss086Rw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pending",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All inventory of a location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTcwNjQ1MzQsImV4cCI6MTcxNzIzNzMzNH0.bJjZgbefzDoMwC3paFpMjeKJeud2HXQ9qkLrss086Rw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/inventory/location/665198e10e0ab02818a1b836",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"inventory",
+								"location",
+								"665198e10e0ab02818a1b836"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "branch location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"solution branch\",\r\n    \"address\": \"Gulshan 2\",\r\n    \"contactInfo\" : \"+8801834521355\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/location",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserWithLocation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTcwNjc2MDAsImV4cCI6MTcxNzI0MDQwMH0.9N-MzPohCqllRWH1JpRYiWKWRHme3wa_l2yVIAWzZ2A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/locationwithUser/665844676c609c79326ae747",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"locationwithUser",
+								"665844676c609c79326ae747"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY2MjM1NzYsImV4cCI6MTcxNjc5NjM3Nn0.D8OWCHD7Ku2xsx9jyd5G7GVMfqlM6tLo-9808Q9xMiE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/allLocation",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"allLocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Location Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY2MjM1NzYsImV4cCI6MTcxNjc5NjM3Nn0.D8OWCHD7Ku2xsx9jyd5G7GVMfqlM6tLo-9808Q9xMiE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/allLocation",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"allLocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Location Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBlOTRlNzE5MjY4YzcyNzIwNGVkYiIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY2MjM1NzYsImV4cCI6MTcxNjc5NjM3Nn0.D8OWCHD7Ku2xsx9jyd5G7GVMfqlM6tLo-9808Q9xMiE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/allLocation",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"allLocation"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			}
+		},
+		{
+			"name": "Assignment",
+			"item": [
+				{
+					"name": "Add assignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6666a6bf6aa0826b0b5a3205\",\r\n    \"employeeId\" : \"665ff4fb8598d6d839a7c41a\",\r\n    \"assignedDate\" : \"09.06.2024\",\r\n    \"returnedDate\" : \"\",\r\n    \"branchId\" : \"665844a36c609c79326ae74f\",\r\n    \"currentStatus\" : \"assigned\",\r\n    \"quantity\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/addAssignment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addAssignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return assignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/returnedAssignments/6752ea6dc738b0852cff516b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"returnedAssignments",
+								"6752ea6dc738b0852cff516b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all assignment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getAllAssignment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getAllAssignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Assignment By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getAllAssignmentById/67542ac384c29a6efd9178c4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getAllAssignmentById",
+								"67542ac384c29a6efd9178c4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "returned Assignments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/returnedAssignments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"returnedAssignments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get pending assignment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getPendingAssignment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getPendingAssignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get returrned Assignment By Branch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWY4MTU2MWYyODVkYWUzNmQ5YjFkNSIsInVzZXJuYW1lIjoiQXJpZiIsImRlcGFydG1lbnQiOiJBZG1pbmlzdHJhdGlvbiIsImJyYW5jaCI6InRheGh1YiIsImJyYW5jaElkIjoiNjY1ODQ0Njc2YzYwOWM3OTMyNmFlNzQ3IiwiaWF0IjoxNzMzNTE3MTA3LCJleHAiOjE3MzM2ODk5MDd9.JYEXJDO2YeSydzAbIP30FJqge60xoBX26dbUQnH35BI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getReturnedAssignmentByBranch",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getReturnedAssignmentByBranch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All Returned Assignment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getAllReturnedAssignment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getAllReturnedAssignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all branch assignment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getBranchAllAssignment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getBranchAllAssignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Emp All Assignment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getEmpAllAssignment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getEmpAllAssignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Pending Assignment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"action\" : \"reject\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/ApprovePendingAssignment/67537d4fb5604b7840857d80",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"ApprovePendingAssignment",
+								"67537d4fb5604b7840857d80"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add  Assign request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getBranchAllAssignment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getBranchAllAssignment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add  Assign request Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"6666a8497773964b522ac4a8\",\r\n  \"assignedDate\": \"2024-11-05\",\r\n  \"returnedDate\": \"\",\r\n  \"branchId\": \"665844676c609c79326ae747\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/requestAssignment",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"requestAssignment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transfer",
+			"item": [
+				{
+					"name": "Add Transfer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTJkYjdhOWRhZGQzYTgyOTQ4NGExOCIsInVzZXJuYW1lIjoiaGFzYW4iLCJkZXBhcnRtZW50IjoiQWRtaW5pc3RyYXRpb24iLCJicmFuY2giOiJkaGFrYSIsImJyYW5jaElkIjoiNjY1MTk4ZTEwZTBhYjAyODE4YTFiODM2IiwiaWF0IjoxNzE3ODcyMTU2LCJleHAiOjE3MTgwNDQ5NTZ9.IjcxPjpd10OJHIoVVJP3mkdZmCjkaHyGP2GepBSwvIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"fromUserId\" : \"664f3bcf9f6eb99d6a745a68\",\r\n    \"toUserId\" : \"664f21c1386ee655542b2ae4\",\r\n    \"fromBranchId\" : \"665198e10e0ab02818a1b836\",\r\n    \"toBranchId\" : \"665198e10e0ab02818a1b836\",\r\n    \"transferDate\" : \"10.02.2024\",\r\n    \"requestedBy\" : \"6650e94e719268c727204edb\",\r\n    \"approvedBy\" : \"6650e94e719268c727204edb\",\r\n    \"approvalDate\" : \"10.02.2024\",\r\n    \"status\" : \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/addTransfer",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"addTransfer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all assignment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWY4MTU2MWYyODVkYWUzNmQ5YjFkNSIsInVzZXJuYW1lIjoiQXJpZiIsImRlcGFydG1lbnQiOiJBZG1pbmlzdHJhdGlvbiIsImJyYW5jaCI6InRheGh1YiIsImJyYW5jaElkIjoiNjY1ODQ0Njc2YzYwOWM3OTMyNmFlNzQ3IiwiaWF0IjoxNzMzNjA0MTUzLCJleHAiOjE3MzM3NzY5NTN9.R_W0yPwyyozQaKsHNhGVTM728vKwJLj1ssirb8kSIkY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : \"6650e89a4089951e41cc0301\",\r\n    \"locationId\" : \"665198e10e0ab02818a1b836\",\r\n    \"quantity\" : \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/getEmpTransfers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getEmpTransfers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		},
+		{
+			"key": "product-url",
+			"value": "http://localhost:5000/api/product",
+			"type": "string"
+		},
+		{
+			"key": "transaction-url",
+			"value": "http://localhost:5000/api/transaction",
+			"type": "string"
+		},
+		{
+			"key": "user-url",
+			"value": "http://localhost:5000/api/user",
+			"type": "string"
+		}
+	]
+}

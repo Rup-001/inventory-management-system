@@ -1,0 +1,136 @@
+[{
+  "_id": {
+    "$oid": "6651beee4933e671c723d7f8"
+  },
+  "productId": {
+    "$oid": "6650e89a4089951e41cc0301"
+  },
+  "fromUserId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "toUserId": {
+    "$oid": "664f21c1386ee655542b2ae4"
+  },
+  "fromBranchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "toBranchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "transferDate": {
+    "$date": "2024-10-01T18:00:00.000Z"
+  },
+  "requestedBy": {
+    "$oid": "6650e94e719268c727204edb"
+  },
+  "approvedBy": {
+    "$oid": "6650e94e719268c727204edb"
+  },
+  "approvalDate": {
+    "$date": "2024-10-01T18:00:00.000Z"
+  },
+  "status": "pending",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6651c06eb020b65d2a8c7d37"
+  },
+  "productId": {
+    "$oid": "6650e89a4089951e41cc0301"
+  },
+  "fromUserId": {
+    "$oid": "664f3bcf9f6eb99d6a745a68"
+  },
+  "toUserId": {
+    "$oid": "664f21c1386ee655542b2ae4"
+  },
+  "fromBranchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "toBranchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "transferDate": {
+    "$date": "2024-10-01T18:00:00.000Z"
+  },
+  "requestedBy": {
+    "$oid": "6650e94e719268c727204edb"
+  },
+  "approvedBy": {
+    "$oid": "6650e94e719268c727204edb"
+  },
+  "approvalDate": {
+    "$date": "2024-10-01T18:00:00.000Z"
+  },
+  "status": "pending",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665cbfe108d5ab9132831771"
+  },
+  "productId": {
+    "$oid": "665848f691d86094bb9f6ea4"
+  },
+  "fromUserId": {
+    "$oid": "6652d3b29c2573a11c0da972"
+  },
+  "toUserId": {
+    "$oid": "6652db7a9dadd3a829484a18"
+  },
+  "fromBranchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "toBranchId": {
+    "$oid": "6656e29376ee5b823ef0ca22"
+  },
+  "transferDate": {
+    "$date": "2024-06-03T00:00:00.000Z"
+  },
+  "requestedBy": {
+    "$oid": "6652db949dadd3a829484a1d"
+  },
+  "approvedBy": {
+    "$oid": "6652db7a9dadd3a829484a18"
+  },
+  "approvalDate": {
+    "$date": "2024-06-03T00:00:00.000Z"
+  },
+  "status": "pending",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6664ae5420c0d1433cdce24e"
+  },
+  "productId": {
+    "$oid": "6650e89a4089951e41cc0301"
+  },
+  "fromUserId": {
+    "$oid": "664f3bcf9f6eb99d6a745a68"
+  },
+  "toUserId": {
+    "$oid": "664f21c1386ee655542b2ae4"
+  },
+  "fromBranchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "toBranchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "transferDate": {
+    "$date": "2024-10-01T18:00:00.000Z"
+  },
+  "requestedBy": {
+    "$oid": "6650e94e719268c727204edb"
+  },
+  "approvedBy": {
+    "$oid": "6650e94e719268c727204edb"
+  },
+  "approvalDate": {
+    "$date": "2024-10-01T18:00:00.000Z"
+  },
+  "status": "pending",
+  "__v": 0
+}]

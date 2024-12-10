@@ -1,0 +1,241 @@
+[{
+  "_id": {
+    "$oid": "6652db7a9dadd3a829484a18"
+  },
+  "username": "hasan",
+  "password": "$2b$10$anz2LDQ/Dwelx0Gc.OCwL.uXZ/qNzVek6ST9Ga2c5qgX9Gw.78Wym",
+  "role": "admin",
+  "isApproved": true,
+  "department": "Administration",
+  "fullName": "hasan Sheikh",
+  "email": "hasan@gmail.com",
+  "phoneNumber": "+8801784556445",
+  "address": "Uttora, Dhaka, Bangladesh",
+  "branchId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "profileImage": "1716706170297-pexels-photo-14918477.jpeg",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-05-26T06:49:30.450Z"
+  },
+  "__v": 0,
+  "designation": "Branch Administration Head",
+  "gender": "Male"
+},
+{
+  "_id": {
+    "$oid": "665f749575bc56015af605fd"
+  },
+  "username": "Lubna",
+  "password": "$2b$10$wyP52xHsfAnlVr7mc0zk8.LmKgJ/h721kSmw5ox9jWSNTJQ6z1W5.",
+  "designation": "Management Information Officer",
+  "isApproved": true,
+  "department": "Technology",
+  "fullName": "Ruqaia Lubna",
+  "email": "lubna@gmail.com",
+  "phoneNumber": "+8801534547764",
+  "address": "Dhaka, Bangladesh",
+  "branchId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "profileImage": "5.jpg",
+  "gender": "Male",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-06-04T20:09:57.310Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665f81561f285dae36d9b1d5"
+  },
+  "username": "Arif",
+  "password": "$2b$10$d8twy7UwQpa82UG2TVJwUeLVAw8/iZmcKcEoEB15ObkMGK1KGaT8.",
+  "designation": "Territory Manager",
+  "isApproved": true,
+  "department": "Administration",
+  "fullName": "Arif khan",
+  "email": "arif@gmail.com",
+  "phoneNumber": "+880983784574",
+  "address": "Khilkhet",
+  "branchId": {
+    "$oid": "665844676c609c79326ae747"
+  },
+  "profileImage": "4.jpeg-1717992594446",
+  "gender": "Male",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-06-04T21:04:22.059Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665ff4fb8598d6d839a7c41a"
+  },
+  "username": "putul",
+  "password": "$2b$10$3KGueCbpPJitMKs4DrIAMOopgI0B8Tjus/7sgXZL9Ow31153iU.Lu",
+  "designation": "Admin Head",
+  "isApproved": true,
+  "department": "Administration",
+  "fullName": "putul",
+  "email": "putul@gmail.com",
+  "phoneNumber": "+880983784574",
+  "address": "khilgaon",
+  "branchId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "profileImage": "2.jpg",
+  "gender": "Female",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-06-05T05:17:47.865Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66600a00db80db4a4b3d18fd"
+  },
+  "username": "zaman",
+  "password": "$2b$10$bX57ZnmKvUN1gXRPSYTq.uE/5F08I881RsSgup0ljVkdu56/AlQtq",
+  "designation": "project manager",
+  "isApproved": true,
+  "department": "Sales",
+  "fullName": "zaman",
+  "email": "zaman@gmail.com",
+  "phoneNumber": "+880983784574",
+  "address": "Banani",
+  "branchId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "profileImage": "7.jpg-1717996513686",
+  "gender": "Male",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-06-05T06:47:28.348Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66600aea86e4868985a1cb77"
+  },
+  "username": "Rup1",
+  "password": "$2b$10$mUaWdudtYOd73CDAzDCu8eN2fdm5W7tq2issApMrnNVKofbKeT486",
+  "designation": "Jr. Software Engineer",
+  "isApproved": true,
+  "department": "Technology",
+  "fullName": "Mohaiminul Islam",
+  "email": "rup@gmail.com",
+  "phoneNumber": "+8801983784574",
+  "address": "Kuril Dhaka",
+  "branchId": {
+    "$oid": "665844676c609c79326ae747"
+  },
+  "profileImage": "4.jpeg-1717994985935",
+  "gender": "Male",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-06-05T06:51:22.799Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6664615f9274ae4c7da77dc4"
+  },
+  "username": "zabir",
+  "password": "$2b$10$4UIMuOkB51wKzcIdkECb8ePM/yT8kQ9BAOdV5c0hRSVf2E5hdHyrO",
+  "designation": "Senior Engineer",
+  "isApproved": true,
+  "department": "Technology",
+  "fullName": "Ahmed Tamim Zabir",
+  "email": "zabir@gmail.com",
+  "phoneNumber": "01531994442",
+  "address": "Kuril, Dhaka",
+  "branchId": {
+    "$oid": "665844676c609c79326ae747"
+  },
+  "profileImage": "8.jpeg-1717996528101",
+  "gender": "Male",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-06-08T13:49:19.364Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "666499fe20c0d1433cdce210"
+  },
+  "username": "rasel",
+  "password": "$2b$10$MgxTeWOB.mv97qQvKxEbEeOzeyygewN/PDkbfeHw10qvWqz7OHXHm",
+  "designation": "software engineer",
+  "isApproved": true,
+  "department": "Technology",
+  "fullName": "iftekhar Rasel",
+  "email": "rasel@gamail.com",
+  "phoneNumber": "+8801765345547",
+  "address": "Dhaka, Bangladesh",
+  "branchId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "profileImage": "4.jpeg",
+  "gender": "Male",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-06-08T17:50:54.962Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66669a2b6aa0826b0b5a3158"
+  },
+  "username": "Mehedi",
+  "password": "$2b$10$L0.1c2os4hwyxaoLx44Dgefvf/0wT.lCsYqUsm4S5mECED/knUx4G",
+  "designation": "Information Officer",
+  "isApproved": true,
+  "department": "Technology",
+  "fullName": "Mehedi Hasan",
+  "email": "mehedi@gmail.com",
+  "phoneNumber": "+880155566784",
+  "address": "Dhaka",
+  "branchId": {
+    "$oid": "665844866c609c79326ae74c"
+  },
+  "profileImage": "8.jpeg-1718000171127",
+  "gender": "Male",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-06-10T06:16:11.395Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66669a746aa0826b0b5a3172"
+  },
+  "username": "Pratim",
+  "password": "$2b$10$Wy7GTqB14B4iCcTU4M1CoOvjNdxQbJpStLcN5yZ3eJc0e0gXTLHPq",
+  "designation": "Department head",
+  "isApproved": true,
+  "department": "Technology",
+  "fullName": "Pratim Lala",
+  "email": "pratim@gmail.com",
+  "phoneNumber": "+8801365678879",
+  "address": "Dhaka",
+  "branchId": {
+    "$oid": "665844866c609c79326ae74c"
+  },
+  "profileImage": "7.jpg-1718000244272",
+  "gender": "Male",
+  "tokens": [],
+  "createdAt": {
+    "$date": "2024-06-10T06:17:24.552Z"
+  },
+  "__v": 0
+}]

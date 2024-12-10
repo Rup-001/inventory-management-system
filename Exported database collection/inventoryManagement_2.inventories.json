@@ -1,0 +1,222 @@
+[{
+  "_id": {
+    "$oid": "6664ab7220c0d1433cdce231"
+  },
+  "productId": {
+    "$oid": "6662f1cda577939828b1804e"
+  },
+  "locationId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666b026cdc9ed0bca377e1f"
+  },
+  "productId": {
+    "$oid": "66646de320c0d1433cdce1b6"
+  },
+  "locationId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666c88753ca30c9d2cdffe0"
+  },
+  "productId": {
+    "$oid": "6664aa7220c0d1433cdce22a"
+  },
+  "locationId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666c8a353ca30c9d2cdfff7"
+  },
+  "productId": {
+    "$oid": "6666a6426aa0826b0b5a31fa"
+  },
+  "locationId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666c96df2de04fb4af368f3"
+  },
+  "productId": {
+    "$oid": "6666aeee7773964b522ac51b"
+  },
+  "locationId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "hasan",
+    "branch": "dhaka",
+    "department": "Administration"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666cb08f2de04fb4af36945"
+  },
+  "productId": {
+    "$oid": "6666ae5f7773964b522ac50a"
+  },
+  "locationId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666cbd2f2de04fb4af36950"
+  },
+  "productId": {
+    "$oid": "6666aea57773964b522ac512"
+  },
+  "locationId": {
+    "$oid": "665844a36c609c79326ae74f"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "putul",
+    "branch": "Head Office",
+    "department": "Administration"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666ccf2f2de04fb4af36969"
+  },
+  "productId": {
+    "$oid": "6666ada47773964b522ac4f6"
+  },
+  "locationId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "hasan",
+    "branch": "dhaka",
+    "department": "Administration"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6666d6d3f2de04fb4af369f4"
+  },
+  "productId": {
+    "$oid": "6666a6bf6aa0826b0b5a3205"
+  },
+  "locationId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "hasan",
+    "branch": "dhaka",
+    "department": "Administration"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66670d91f2de04fb4af3971e"
+  },
+  "productId": {
+    "$oid": "6666a41c6aa0826b0b5a31ef"
+  },
+  "locationId": {
+    "$oid": "665844676c609c79326ae747"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "Arif",
+    "branch": "taxhub",
+    "department": "Administration"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66670d9ef2de04fb4af39725"
+  },
+  "productId": {
+    "$oid": "6666a8497773964b522ac4a8"
+  },
+  "locationId": {
+    "$oid": "665844676c609c79326ae747"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "Arif",
+    "branch": "taxhub",
+    "department": "Administration"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66670da6f2de04fb4af3972c"
+  },
+  "productId": {
+    "$oid": "6666a8917773964b522ac4b1"
+  },
+  "locationId": {
+    "$oid": "665844676c609c79326ae747"
+  },
+  "quantity": 1,
+  "status": "approved",
+  "addedBy": {
+    "username": "Arif",
+    "branch": "taxhub",
+    "department": "Administration"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "666735bc656cbac29df3690c"
+  },
+  "productId": {
+    "$oid": "6666ae2e7773964b522ac503"
+  },
+  "locationId": {
+    "$oid": "665198e10e0ab02818a1b836"
+  },
+  "quantity": 1,
+  "status": "pending",
+  "addedBy": {
+    "username": "hasan",
+    "branch": "dhaka",
+    "department": "Administration"
+  },
+  "__v": 0
+}]
